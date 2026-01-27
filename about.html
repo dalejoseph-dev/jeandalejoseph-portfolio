@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,13 +16,22 @@
         <header>
             <div class="header-content">
                 <div class="logo">jean-dale</div>
-                <nav>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                    <span id="menuIcon">☰</span>
+                </button>
+                <nav class="desktop-nav">
                     <a href="index.html" class="nav-item">_hello</a>
                     <a href="about.html" class="nav-item active">_about-me</a>
                     <a href="projects.html" class="nav-item">_projects</a>
                     <a href="contact.html" class="nav-item">_contact-me</a>
                 </nav>
             </div>
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-item" onclick="toggleMobileMenu()">_hello</a>
+                <a href="about.html" class="nav-item active" onclick="toggleMobileMenu()">_about-me</a>
+                <a href="projects.html" class="nav-item" onclick="toggleMobileMenu()">_projects</a>
+                <a href="contact.html" class="nav-item" onclick="toggleMobileMenu()">_contact-me</a>
+            </nav>
         </header>
 
         <!-- Main Layout -->
@@ -60,7 +70,7 @@
                     </div>
                     <div class="sidebar-content hidden" id="contacts">
                         <div class="contact-item">
-                            <span class="contact-icon">✉</span> user@gmail.com
+                            <span class="contact-icon">✉</span> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cdb8bea8bf8daaa0aca4a1e3aea2a0">[email&#160;protected]</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📱</span> +3598246359
@@ -232,46 +242,6 @@
         </footer>
     </div>
 
-    <script>
-        function toggleSection(id) {
-            const content = document.getElementById(id);
-            const arrow = content.previousElementSibling.querySelector('.arrow');
-            
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                arrow.textContent = '▼';
-            } else {
-                content.classList.add('hidden');
-                arrow.textContent = '▶';
-            }
-        }
-
-        // Toggle snippet description
-        document.querySelectorAll('.details-btn').forEach((btn, index) => {
-            btn.addEventListener('click', function() {
-                const card = this.closest('.snippet-card');
-                const description = card.querySelector('.snippet-description');
-                const closeBtn = card.querySelector('.close-btn');
-                
-                if (description.classList.contains('hidden')) {
-                    description.classList.remove('hidden');
-                    closeBtn.style.display = 'block';
-                } else {
-                    description.classList.add('hidden');
-                    closeBtn.style.display = 'none';
-                }
-            });
-        });
-
-        // Close button for snippets
-        document.querySelectorAll('.close-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const card = this.closest('.snippet-card');
-                const description = card.querySelector('.snippet-description');
-                description.classList.add('hidden');
-                this.style.display = 'none';
-            });
-        });
-    </script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 </html>

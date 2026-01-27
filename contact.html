@@ -15,13 +15,22 @@
         <header>
             <div class="header-content">
                 <div class="logo">jean-dale</div>
-                <nav>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                    <span id="menuIcon">☰</span>
+                </button>
+                <nav class="desktop-nav">
                     <a href="index.html" class="nav-item">_hello</a>
                     <a href="about.html" class="nav-item">_about-me</a>
                     <a href="projects.html" class="nav-item">_projects</a>
                     <a href="contact.html" class="nav-item active">_contact-me</a>
                 </nav>
             </div>
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-item" onclick="toggleMobileMenu()">_hello</a>
+                <a href="about.html" class="nav-item" onclick="toggleMobileMenu()">_about-me</a>
+                <a href="projects.html" class="nav-item" onclick="toggleMobileMenu()">_projects</a>
+                <a href="contact.html" class="nav-item active" onclick="toggleMobileMenu()">_contact-me</a>
+            </nav>
         </header>
 
         <!-- Main Layout -->
@@ -220,71 +229,6 @@
         </footer>
     </div>
 
-    <script>
-        // Toggle sidebar sections
-        function toggleContactSection(id) {
-            const content = document.getElementById(id);
-            const arrow = content.previousElementSibling.querySelector('.arrow');
-            
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                arrow.textContent = '▼';
-            } else {
-                content.classList.add('hidden');
-                arrow.textContent = '▶';
-            }
-        }
-
-        // Update code preview in real-time
-        function updatePreview() {
-            const name = document.getElementById('nameInput').value;
-            const email = document.getElementById('emailInput').value;
-            const message = document.getElementById('messageInput').value;
-            
-            document.getElementById('previewName').textContent = name ? `"${name}"` : '""';
-            document.getElementById('previewEmail').textContent = email ? `"${email}"` : '""';
-            document.getElementById('previewMessage').textContent = message ? `"${message}"` : '""';
-            
-            // Update date to current
-            const date = new Date();
-            const options = { weekday: 'short', day: '2-digit', month: 'short' };
-            const formattedDate = date.toLocaleDateString('en-US', options);
-            document.getElementById('previewDate').textContent = `"${formattedDate}"`;
-        }
-
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formContainer = document.getElementById('formContainer');
-            const form = document.getElementById('contactForm');
-            const successMessage = document.getElementById('successMessage');
-            
-            // Hide form, show success message
-            form.classList.add('hidden');
-            successMessage.classList.remove('hidden');
-        });
-
-        // Reset form
-        function resetForm() {
-            const form = document.getElementById('contactForm');
-            const successMessage = document.getElementById('successMessage');
-            
-            // Clear form
-            form.reset();
-            
-            // Update preview
-            updatePreview();
-            
-            // Show form, hide success message
-            successMessage.classList.add('hidden');
-            form.classList.remove('hidden');
-        }
-
-        // Initialize date on page load
-        window.addEventListener('DOMContentLoaded', function() {
-            updatePreview();
-        });
-    </script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 </html>
