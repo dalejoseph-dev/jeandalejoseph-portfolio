@@ -56,6 +56,13 @@ header {
     font-size: 16px;
     border-right: 1px solid var(--border-color);
     min-width: 200px;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--text-white);
 }
 
 nav,
@@ -73,10 +80,25 @@ nav,
     cursor: pointer;
     padding: 0.5rem;
     margin-left: auto;
+    transition: all 0.3s ease;
 }
 
 .mobile-menu-toggle:hover {
     color: var(--text-white);
+    transform: scale(1.1);
+}
+
+.mobile-menu-toggle:active {
+    transform: scale(0.95);
+}
+
+.mobile-menu-toggle #menuIcon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-toggle.active #menuIcon {
+    transform: rotate(90deg);
 }
 
 .mobile-nav {
@@ -92,10 +114,27 @@ nav,
     padding: 0;
     overflow-y: auto;
     border-bottom: 1px solid var(--border-color);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .mobile-nav.active {
-    display: flex;
+    display: flex !important;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .mobile-nav .nav-item {
@@ -107,11 +146,45 @@ nav,
     text-decoration: none;
     display: block;
     transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.mobile-nav.active .nav-item {
+    animation: slideInItem 0.3s ease forwards;
+}
+
+.mobile-nav.active .nav-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.mobile-nav.active .nav-item:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.mobile-nav.active .nav-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.mobile-nav.active .nav-item:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+@keyframes slideInItem {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .mobile-nav .nav-item:hover {
     color: var(--text-white);
     background: rgba(96, 123, 150, 0.1);
+    transform: translateX(5px);
 }
 
 .mobile-nav .nav-item.active {
@@ -1394,12 +1467,12 @@ footer {
         padding: 1.5rem;
     }
 
-    /* Hide desktop nav on tablet */
-    nav,
+    /* Hide desktop nav on tablet/mobile */
     .desktop-nav {
         display: none !important;
     }
 
+    /* Show mobile menu toggle */
     .mobile-menu-toggle {
         display: block;
         margin-left: auto;
