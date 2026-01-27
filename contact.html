@@ -3,80 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Jean Dale Joseph | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact - Micheal Weaver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
-        <div class="max-w-6xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <h1 class="text-2xl font-bold gradient-text">
-                    <a href="index.html">Jean Dale Joseph | Portfolio</a>
-                </h1>
-                <div class="flex gap-8">
-                    <a href="index.html" class="nav-link text-slate-300 hover:text-white">Home</a>
-                    <a href="about.html" class="nav-link text-slate-300 hover:text-white">About</a>
-                    <a href="skills.html" class="nav-link text-slate-300 hover:text-white">Skills</a>
-                    <a href="projects.html" class="nav-link text-slate-300 hover:text-white">Projects</a>
-                    <a href="contact.html" class="nav-link text-white active">Contact</a>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <div class="logo">micheal-weaver</div>
+                <nav>
+                    <a href="index.html" class="nav-item">_hello</a>
+                    <a href="about.html" class="nav-item">_about-me</a>
+                    <a href="projects.html" class="nav-item">_projects</a>
+                    <a href="contact.html" class="nav-item active">_contact-me</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="contact-layout">
+            <!-- Left Sidebar -->
+            <aside class="contact-sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleContactSection('contacts-section')">
+                        <span class="arrow">▼</span> contacts
+                    </div>
+                    <div class="sidebar-content" id="contacts-section">
+                        <div class="contact-item">
+                            <span class="contact-icon">✉</span> user@gmail.com
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span> +3598246359
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleContactSection('find-me-section')">
+                        <span class="arrow">▼</span> find-me-also-in
+                    </div>
+                    <div class="sidebar-content" id="find-me-section">
+                        <div class="social-item">
+                            <span class="link-icon">🔗</span> YouTube channel
+                        </div>
+                        <div class="social-item">
+                            <span class="link-icon">🔗</span> GuruShots profile
+                        </div>
+                        <div class="social-item">
+                            <span class="link-icon">🔗</span> Instagram account
+                        </div>
+                        <div class="social-item">
+                            <span class="link-icon">🔗</span> Twitch profile
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Middle - Contact Form -->
+            <main class="contact-content">
+                <div class="tabs">
+                    <div class="tab active">
+                        contacts
+                        <button class="tab-close">×</button>
+                    </div>
+                </div>
+
+                <div class="form-container" id="formContainer">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label class="form-label">_name:</label>
+                            <input 
+                                type="text" 
+                                id="nameInput" 
+                                class="form-input" 
+                                placeholder="Jonathan Davis"
+                                oninput="updatePreview()"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">_email:</label>
+                            <input 
+                                type="email" 
+                                id="emailInput" 
+                                class="form-input" 
+                                placeholder="jonathan-davis@gmail.com"
+                                oninput="updatePreview()"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">_message:</label>
+                            <textarea 
+                                id="messageInput" 
+                                class="form-textarea" 
+                                placeholder="Hey! Just checked your website and it looks awesome! Also, I checked your articled on Medium. Lerned a few nice tips. Thanks!"
+                                oninput="updatePreview()"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">submit-message</button>
+                    </form>
+
+                    <div id="successMessage" class="success-message hidden">
+                        <h2 class="success-title">Thank you! 🤘</h2>
+                        <p class="success-text">Your message has been accepted. You will recieve answer really soon!</p>
+                        <button onclick="resetForm()" class="submit-btn">send-new-message</button>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Sidebar - Code Preview -->
+            <aside class="code-preview-sidebar">
+                <div class="code-lines">
+                    <div class="code-line-wrapper">
+                        <span class="line-num">1</span>
+                        <span class="code-text">
+                            <span class="keyword">const</span> 
+                            <span class="variable">button</span> = 
+                            <span class="variable">document</span>.<span class="variable">querySelector</span>(<span class="string">'#sendBtn'</span>);
+                        </span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">2</span>
+                        <span class="code-text"></span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">3</span>
+                        <span class="code-text">
+                            <span class="keyword">const</span> 
+                            <span class="variable">message</span> = {
+                        </span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">4</span>
+                        <span class="code-text code-indent">
+                            <span class="variable">name</span>: 
+                            <span class="string" id="previewName">""</span>,
+                        </span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">5</span>
+                        <span class="code-text code-indent">
+                            <span class="variable">email</span>: 
+                            <span class="string" id="previewEmail">""</span>,
+                        </span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">6</span>
+                        <span class="code-text code-indent">
+                            <span class="variable">message</span>: 
+                            <span class="string" id="previewMessage">""</span>,
+                        </span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">7</span>
+                        <span class="code-text code-indent">
+                            <span class="variable">date</span>: 
+                            <span class="string" id="previewDate">"Thu 21 Apr"</span>
+                        </span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">8</span>
+                        <span class="code-text">}</span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">9</span>
+                        <span class="code-text"></span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">10</span>
+                        <span class="code-text">
+                            <span class="variable">button</span>.<span class="variable">addEventListener</span>(<span class="string">'click'</span>, () => {
+                        </span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">11</span>
+                        <span class="code-text code-indent">
+                            <span class="variable">form</span>.<span class="variable">send</span>(<span class="variable">message</span>);
+                        </span>
+                    </div>
+                    <div class="code-line-wrapper">
+                        <span class="line-num">12</span>
+                        <span class="code-text">})</span>
+                    </div>
+                </div>
+            </aside>
         </div>
-    </nav>
 
-    <!-- Contact Section -->
-    <section class="min-h-screen flex items-center justify-center px-6 py-20 pt-32">
-        <div class="max-w-2xl w-full fade-in">
-            <h2 class="text-4xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
-            
-            <div class="card rounded-2xl p-8">
-                <form id="contactForm" class="space-y-6">
-                    <div>
-                        <label class="block mb-2 text-slate-300">Name</label>
-                        <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:border-blue-400 focus:outline-none transition" placeholder="Your name" required>
-                    </div>
-                    <div>
-                        <label class="block mb-2 text-slate-300">Email</label>
-                        <input type="email" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:border-blue-400 focus:outline-none transition" placeholder="your.email@example.com" required>
-                    </div>
-                    <div>
-                        <label class="block mb-2 text-slate-300">Message</label>
-                        <textarea rows="5" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 focus:border-blue-400 focus:outline-none transition" placeholder="Your message..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary w-full px-8 py-3 rounded-lg font-semibold">Send Message</button>
-                </form>
-            </div>
-
-            <div class="flex justify-center gap-6 mt-12">
-                <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-500 transition" title="LinkedIn">
-                    <span>💼</span>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-left">find me in:</div>
+            <div class="footer-links">
+                <a href="https://twitter.com" class="social-link" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
                 </a>
-                <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-500 transition" title="GitHub">
-                    <span>🐙</span>
-                </a>
-                <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-500 transition" title="Twitter">
-                    <span>🔗</span>
-                </a>
-                <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-500 transition" title="Email">
-                    <span>✉️</span>
+                <a href="https://facebook.com" class="social-link" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900/50 border-t border-slate-700/50 py-8 text-center text-slate-400">
-        <p>&copy; 2026 Jean Dale Joseph.</p>
-    </footer>
+            <div class="footer-right">
+                <a href="https://github.com/username" class="social-link github-link" target="_blank">
+                    @username
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </div>
 
     <script>
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
+        // Toggle sidebar sections
+        function toggleContactSection(id) {
+            const content = document.getElementById(id);
+            const arrow = content.previousElementSibling.querySelector('.arrow');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                arrow.textContent = '▼';
+            } else {
+                content.classList.add('hidden');
+                arrow.textContent = '▶';
+            }
+        }
+
+        // Update code preview in real-time
+        function updatePreview() {
+            const name = document.getElementById('nameInput').value;
+            const email = document.getElementById('emailInput').value;
+            const message = document.getElementById('messageInput').value;
+            
+            document.getElementById('previewName').textContent = name ? `"${name}"` : '""';
+            document.getElementById('previewEmail').textContent = email ? `"${email}"` : '""';
+            document.getElementById('previewMessage').textContent = message ? `"${message}"` : '""';
+            
+            // Update date to current
+            const date = new Date();
+            const options = { weekday: 'short', day: '2-digit', month: 'short' };
+            const formattedDate = date.toLocaleDateString('en-US', options);
+            document.getElementById('previewDate').textContent = `"${formattedDate}"`;
+        }
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! This is a demo form.');
-            e.target.reset();
+            
+            const formContainer = document.getElementById('formContainer');
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Hide form, show success message
+            form.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        });
+
+        // Reset form
+        function resetForm() {
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Clear form
+            form.reset();
+            
+            // Update preview
+            updatePreview();
+            
+            // Show form, hide success message
+            successMessage.classList.add('hidden');
+            form.classList.remove('hidden');
+        }
+
+        // Initialize date on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            updatePreview();
         });
     </script>
 </body>

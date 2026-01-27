@@ -3,56 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Jean Dale Joseph | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>About Me - Micheal Weaver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
-        <div class="max-w-6xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <h1 class="text-2xl font-bold gradient-text">
-                    <a href="index.html">Jean Dale Joseph | Portfolio</a>
-                </h1>
-                <div class="flex gap-8">
-                    <a href="index.html" class="nav-link text-slate-300 hover:text-white">Home</a>
-                    <a href="about.html" class="nav-link text-white active">About</a>
-                    <a href="skills.html" class="nav-link text-slate-300 hover:text-white">Skills</a>
-                    <a href="projects.html" class="nav-link text-slate-300 hover:text-white">Projects</a>
-                    <a href="contact.html" class="nav-link text-slate-300 hover:text-white">Contact</a>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <div class="logo">micheal-weaver</div>
+                <nav>
+                    <a href="index.html" class="nav-item">_hello</a>
+                    <a href="about.html" class="nav-item active">_about-me</a>
+                    <a href="projects.html" class="nav-item">_projects</a>
+                    <a href="contact.html" class="nav-item">_contact-me</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="about-layout">
+            <!-- Left Sidebar -->
+            <aside class="about-sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleSection('personal-info')">
+                        <span class="arrow">▼</span> personal-info
+                    </div>
+                    <div class="sidebar-content" id="personal-info">
+                        <div class="folder-item">
+                            <span class="folder-icon">📁</span> bio
+                        </div>
+                        <div class="folder-item">
+                            <span class="folder-icon">📁</span> interests
+                        </div>
+                        <div class="folder-group">
+                            <div class="folder-item">
+                                <span class="folder-icon">📁</span> education
+                            </div>
+                            <div class="subfolder-items">
+                                <div class="subfolder-item">
+                                    <span class="file-icon">📄</span> high-school
+                                </div>
+                                <div class="subfolder-item">
+                                    <span class="file-icon">📄</span> university
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </nav>
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleSection('contacts')">
+                        <span class="arrow">▶</span> contacts
+                    </div>
+                    <div class="sidebar-content hidden" id="contacts">
+                        <div class="contact-item">
+                            <span class="contact-icon">✉</span> user@gmail.com
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span> +3598246359
+                        </div>
+                    </div>
+                </div>
+            </aside>
 
-    <!-- About Section -->
-    <section class="min-h-screen flex items-center justify-center px-6 py-20 pt-32">
-        <div class="max-w-4xl fade-in">
-            <h2 class="text-4xl font-bold mb-12 text-center gradient-text">About Me</h2>
-            <div class="card rounded-2xl p-8">
-                <p class="text-lg text-slate-300 leading-relaxed mb-6">
-                    I'm a passionate developer with expertise in building modern web applications. 
-                    With a strong foundation in both frontend and backend technologies, I create 
-                    seamless digital experiences that combine aesthetic design with robust functionality.
-                </p>
-                <p class="text-lg text-slate-300 leading-relaxed mb-6">
-                    My journey in web development has equipped me with a versatile skill set, 
-                    allowing me to tackle challenges from responsive UI design to scalable server architecture. 
-                    I'm constantly learning and staying updated with the latest industry trends.
-                </p>
-                <p class="text-lg text-slate-300 leading-relaxed">
-                    Whether it's building dynamic user interfaces with React and TypeScript, designing 
-                    beautiful layouts with Tailwind CSS, or developing robust backend systems with Node.js 
-                    and PostgreSQL, I bring dedication and expertise to every project I undertake.
-                </p>
-            </div>
-        </div>
-    </section>
+            <!-- Middle Content Area -->
+            <main class="about-content">
+                <div class="tabs">
+                    <div class="tab active">
+                        personal-info
+                        <button class="tab-close">×</button>
+                    </div>
+                </div>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900/50 border-t border-slate-700/50 py-8 text-center text-slate-400">
-        <p>&copy; 2026 Jean Dale Joseph.</p>
-    </footer>
+                <div class="code-content">
+                    <div class="code-lines">
+                        <div class="code-line-wrapper">
+                            <span class="line-num">1</span>
+                            <span class="code-text"><span class="comment">/**</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">2</span>
+                            <span class="code-text"><span class="comment">* About me</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">3</span>
+                            <span class="code-text"><span class="comment">* I have 5 years of experience in web</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">4</span>
+                            <span class="code-text"><span class="comment">* development lorem ipsum dolor sit amet,</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">5</span>
+                            <span class="code-text"><span class="comment">* consectetur adipiscing elit, sed do eiusmod</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">6</span>
+                            <span class="code-text"><span class="comment">* tempor incididunt ut labore et dolore</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">7</span>
+                            <span class="code-text"><span class="comment">* magna aliqua. Ut enim ad minim veniam</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">8</span>
+                            <span class="code-text"><span class="comment">* quis nostrud exercitation ullamco laboris</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">9</span>
+                            <span class="code-text"><span class="comment">* nisi ut aliquip ex ea commodo consequat.</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">10</span>
+                            <span class="code-text"><span class="comment">* Duis aute irure dolor in reprehenderit in</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">11</span>
+                            <span class="code-text"><span class="comment">*</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">12</span>
+                            <span class="code-text"><span class="comment">* Duis aute irure dolor in reprehenderit in</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">13</span>
+                            <span class="code-text"><span class="comment">* voluptate velit esse cillum dolore eu fugiat</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">14</span>
+                            <span class="code-text"><span class="comment">* nulla pariatur. Excepteur sint occaecat</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">15</span>
+                            <span class="code-text"><span class="comment">* officia deserunt mollit anim id est laborum.</span></span>
+                        </div>
+                        <div class="code-line-wrapper">
+                            <span class="line-num">16</span>
+                            <span class="code-text"><span class="comment">*/</span></span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Sidebar - Code Snippets -->
+            <aside class="snippets-sidebar">
+                <div class="snippets-header">
+                    <span class="comment">// Code snippet showcase:</span>
+                </div>
+
+                <div class="snippet-card">
+                    <div class="snippet-header">
+                        <div class="snippet-avatar"></div>
+                        <div class="snippet-info">
+                            <div class="snippet-username">@username</div>
+                            <div class="snippet-date">Created 5 months ago</div>
+                        </div>
+                        <div class="snippet-actions">
+                            <button class="details-btn">details</button>
+                            <span class="stars">★ 3 starts</span>
+                        </div>
+                    </div>
+                    <div class="snippet-code">
+                        <pre><span class="keyword">function</span> <span class="variable">initializeModelChunk</span>&lt;T&gt;(<span class="variable">chunk</span>: ResolvedModelChunk): T {
+  <span class="keyword">const</span> <span class="variable">value</span>: T = <span class="variable">parseModel</span>(<span class="variable">chunk._response</span>, <span class="variable">chunk._value</span>);
+  <span class="keyword">const</span> <span class="variable">initializedChunk</span>: InitializedChunk&lt;T&gt; = (<span class="variable">chunk</span>: any);
+  <span class="variable">initializedChunk._status</span> = INITIALIZED;
+  <span class="variable">initializedChunk._value</span> = value;
+  <span class="keyword">return</span> value;
+}</pre>
+                    </div>
+                    <div class="snippet-footer">
+                        <button class="close-btn">×</button>
+                    </div>
+                    <div class="snippet-description hidden">
+                        My work here was 5 months ago. It was for the project called "...". Some other text can be placed here.
+                    </div>
+                </div>
+
+                <div class="snippet-card">
+                    <div class="snippet-header">
+                        <div class="snippet-avatar"></div>
+                        <div class="snippet-info">
+                            <div class="snippet-username">@username</div>
+                            <div class="snippet-date">Created 9 months ago</div>
+                        </div>
+                        <div class="snippet-actions">
+                            <button class="details-btn">details</button>
+                            <span class="stars">★ 0 starts</span>
+                        </div>
+                    </div>
+                    <div class="snippet-code">
+                        <pre><span class="keyword">export function</span> <span class="variable">parseModelTuple</span>(
+  <span class="variable">response</span>: Response,
+  <span class="variable">value</span>: {<span class="variable">+[key: string]</span>: JSONValue} | $ReadOnlyArray&lt;JSONValue&gt;,
+): any {
+  <span class="keyword">const</span> <span class="variable">tuple</span>: [mixed, mixed, mixed, mixed] = (<span class="variable">value</span>: any);</pre>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-left">find me in:</div>
+            <div class="footer-links">
+                <a href="https://twitter.com" class="social-link" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+                <a href="https://facebook.com" class="social-link" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-right">
+                <a href="https://github.com/username" class="social-link github-link" target="_blank">
+                    @username
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleSection(id) {
+            const content = document.getElementById(id);
+            const arrow = content.previousElementSibling.querySelector('.arrow');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                arrow.textContent = '▼';
+            } else {
+                content.classList.add('hidden');
+                arrow.textContent = '▶';
+            }
+        }
+
+        // Toggle snippet description
+        document.querySelectorAll('.details-btn').forEach((btn, index) => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.snippet-card');
+                const description = card.querySelector('.snippet-description');
+                const closeBtn = card.querySelector('.close-btn');
+                
+                if (description.classList.contains('hidden')) {
+                    description.classList.remove('hidden');
+                    closeBtn.style.display = 'block';
+                } else {
+                    description.classList.add('hidden');
+                    closeBtn.style.display = 'none';
+                }
+            });
+        });
+
+        // Close button for snippets
+        document.querySelectorAll('.close-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.snippet-card');
+                const description = card.querySelector('.snippet-description');
+                description.classList.add('hidden');
+                this.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
