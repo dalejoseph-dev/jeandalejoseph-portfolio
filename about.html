@@ -55,10 +55,10 @@
                             </div>
                             <div class="subfolder-items">
                                 <div class="subfolder-item">
-                                    <span class="file-icon">📄</span> high-school
+                                    <span class="file-icon">📄</span> Philippine Christian University
                                 </div>
                                 <div class="subfolder-item">
-                                    <span class="file-icon">📄</span> university
+                                    <span class="file-icon">📄</span> Mapúa Universty BS in Computer Science
                                 </div>
                             </div>
                         </div>
@@ -162,52 +162,103 @@
 
                 <div class="snippet-card">
                     <div class="snippet-header">
-                        <div class="snippet-avatar"></div>
+                        <div class="snippet-avatar"><img class="snippet-avatar" src="img/profile-pic.jpg" alt="Image cannot be found."></div>
                         <div class="snippet-info">
-                            <div class="snippet-username">@username</div>
+                            <div class="snippet-username">@dalejoseph-dev</div>
                             <div class="snippet-date">Created 5 months ago</div>
                         </div>
                         <div class="snippet-actions">
                             <button class="details-btn">details</button>
-                            <span class="stars">★ 3 starts</span>
+                            <span class="stars">★ 4.7 starts</span>
                         </div>
                     </div>
                     <div class="snippet-code">
-                        <pre><span class="keyword">function</span> <span class="variable">initializeModelChunk</span>&lt;T&gt;(<span class="variable">chunk</span>: ResolvedModelChunk): T {
-  <span class="keyword">const</span> <span class="variable">value</span>: T = <span class="variable">parseModel</span>(<span class="variable">chunk._response</span>, <span class="variable">chunk._value</span>);
-  <span class="keyword">const</span> <span class="variable">initializedChunk</span>: InitializedChunk&lt;T&gt; = (<span class="variable">chunk</span>: any);
-  <span class="variable">initializedChunk._status</span> = INITIALIZED;
-  <span class="variable">initializedChunk._value</span> = value;
-  <span class="keyword">return</span> value;
+    <pre><span class="keyword">#include</span> &lt;iostream&gt;
+<span class="keyword">#include</span> &lt;string&gt;
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="variable">std</span>;
+
+<span class="keyword">int</span> <span class="variable">main</span>() {
+    <span class="variable">string</span> <span class="variable">sentence</span>;
+    <span class="keyword">int</span> <span class="variable">count</span> = 0;
+
+    <span class="variable">cout</span> &lt;&lt; <span class="variable">"Enter a sentence: "</span>;
+    <span class="variable">getline</span>(<span class="variable">cin</span>, <span class="variable">sentence</span>);
+
+    <span class="keyword">for</span> (<span class="keyword">int</span> <span class="variable">i</span> = 0; <span class="variable">i</span> &lt; <span class="variable">sentence.length</span>(); <span class="variable">i</span>++) {
+        <span class="keyword">if</span> (<span class="variable">sentence[i]</span> == <span class="variable">' '</span>) <span class="variable">count</span>++;
+    }
+
+    <span class="variable">cout</span> &lt;&lt; <span class="variable">"Word count: "</span> &lt;&lt; <span class="variable">count</span> + 1;
+    <span class="keyword">return</span> 0;
 }</pre>
-                    </div>
+</div>
+
+
+                    <!--
                     <div class="snippet-footer">
                         <button class="close-btn">×</button>
                     </div>
                     <div class="snippet-description hidden">
-                        My work here was 5 months ago. It was for the project called "...". Some other text can be placed here.
+                        
                     </div>
+                    -->
+
                 </div>
 
                 <div class="snippet-card">
                     <div class="snippet-header">
-                        <div class="snippet-avatar"></div>
+                        <div class="snippet-avatar"><img class="snippet-avatar" src="img/profile-pic.jpg" alt="Image cannot be found."></div>
                         <div class="snippet-info">
-                            <div class="snippet-username">@username</div>
+                            <div class="snippet-username">@dalejoseph-dev</div>
                             <div class="snippet-date">Created 9 months ago</div>
                         </div>
                         <div class="snippet-actions">
                             <button class="details-btn">details</button>
-                            <span class="stars">★ 0 starts</span>
+                            <span class="stars">★ 5 starts</span>
                         </div>
                     </div>
                     <div class="snippet-code">
-                        <pre><span class="keyword">export function</span> <span class="variable">parseModelTuple</span>(
-  <span class="variable">response</span>: Response,
-  <span class="variable">value</span>: {<span class="variable">+[key: string]</span>: JSONValue} | $ReadOnlyArray&lt;JSONValue&gt;,
-): any {
-  <span class="keyword">const</span> <span class="variable">tuple</span>: [mixed, mixed, mixed, mixed] = (<span class="variable">value</span>: any);</pre>
-                    </div>
+    <pre><span class="keyword">#include</span> &lt;iostream&gt;
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="variable">std</span>;
+
+<span class="keyword">class</span> <span class="variable">BankAccount</span> {
+<span class="keyword">private</span>:
+    <span class="variable">string</span> <span class="variable">owner</span>;
+    <span class="keyword">double</span> <span class="variable">balance</span>;
+
+<span class="keyword">public</span>:
+    <span class="variable">BankAccount</span>(<span class="variable">string</span> <span class="variable">name</span>, <span class="keyword">double</span> <span class="variable">initial</span>) {
+        <span class="variable">owner</span> = <span class="variable">name</span>;
+        <span class="variable">balance</span> = <span class="variable">initial</span>;
+    }
+
+    <span class="keyword">void</span> <span class="variable">deposit</span>(<span class="keyword">double</span> <span class="variable">amount</span>) {
+        <span class="variable">balance</span> += <span class="variable">amount</span>;
+    }
+
+    <span class="keyword">void</span> <span class="variable">withdraw</span>(<span class="keyword">double</span> <span class="variable">amount</span>) {
+        <span class="keyword">if</span> (<span class="variable">amount</span> &lt;= <span class="variable">balance</span>)
+            <span class="variable">balance</span> -= <span class="variable">amount</span>;
+        <span class="keyword">else</span>
+            <span class="variable">cout</span> &lt;&lt; <span class="variable">"Insufficient funds\n"</span>;
+    }
+
+    <span class="keyword">void</span> <span class="variable">display</span>() {
+        <span class="variable">cout</span> &lt;&lt; <span class="variable">"Owner: "</span> &lt;&lt; <span class="variable">owner</span>
+             &lt;&lt; <span class="variable">", Balance: $" </span> &lt;&lt; <span class="variable">balance</span>
+             &lt;&lt; <span class="variable">endl</span>;
+    }
+};
+
+<span class="keyword">int</span> <span class="variable">main</span>() {
+    <span class="variable">BankAccount</span> <span class="variable">acc</span>(<span class="variable">"Alice"</span>, 1000.0);
+    <span class="variable">acc.deposit</span>(200);
+    <span class="variable">acc.withdraw</span>(150);
+    <span class="variable">acc.display</span>();
+    <span class="keyword">return</span> 0;
+}</pre>
+</div>
+
                 </div>
             </aside>
         </div>
