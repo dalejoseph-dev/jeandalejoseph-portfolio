@@ -859,6 +859,42 @@ footer {
     height: 24px;
 }
 
+.project-badge-2 {
+    position: absolute;
+    top: 1rem;
+    right: 4.3rem;
+    background: rgba(1, 22, 39, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: var(--text-white);
+}
+
+.project-badge-3 {
+    position: absolute;
+    top: 1rem;
+    right: 7.6rem;
+    background: rgba(1, 22, 39, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: var(--text-white);
+}
+
 .project-info {
     padding: 1.5rem;
     display: flex;
