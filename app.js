@@ -130,13 +130,30 @@ function filterProjects() {
     
     // Show/hide projects based on filters
     projectCards.forEach(card => {
-        const tech = card.getAttribute('data-tech');
-        if (selectedFilters.length === 0 || selectedFilters.includes(tech)) {
+        const techAttr = card.getAttribute('data-tech');
+        const cardTechs = techAttr ? techAttr.split(',') : [];
+        
+        // Show card if no filters selected OR if any selected filter matches any of the card's tech
+        if (selectedFilters.length === 0 || selectedFilters.some(filter => cardTechs.includes(filter))) {
             card.style.display = 'block';
         } else {
             card.style.display = 'none';
         }
     });
+}
+
+// Toggle projects sidebar filters
+function toggleProjectsSidebar() {
+    const filters = document.getElementById('projectsFilters');
+    const arrow = document.getElementById('projectsArrow');
+    
+    if (filters.classList.contains('hidden')) {
+        filters.classList.remove('hidden');
+        arrow.textContent = '▼';
+    } else {
+        filters.classList.add('hidden');
+        arrow.textContent = '▶';
+    }
 }
 
 // Toggle snippet details
