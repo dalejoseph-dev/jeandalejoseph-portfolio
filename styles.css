@@ -1698,3 +1698,10 @@ footer {
         flex-wrap: wrap;
     }
 }
+
+.string {
+    text-decoration: none;
+}
+.string:hover {
+    color: #d68f58;
+}
