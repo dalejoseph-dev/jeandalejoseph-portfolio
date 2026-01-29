@@ -21,7 +21,7 @@
 
 This is a personal portfolio website for Jean Dale, a front-end developer. The portfolio features a developer-themed design with a code editor aesthetic, showcasing personal information, projects, and contact details.
 
-**Live URL:** https://jeandale-grpp27rp8-jean-dales-projects.vercel.app
+**Live URL:** https://jeandaledev.vercel.app/
 
 ### Key Characteristics
 - **Theme:** Dark, code editor-inspired interface
