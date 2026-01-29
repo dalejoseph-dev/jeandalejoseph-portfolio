@@ -527,7 +527,7 @@ Using VS Code Live Server:
 
 ### Current Deployment
 **Platform:** Vercel
-**URL:** https://jeandale-grpp27rp8-jean-dales-projects.vercel.app
+**URL:** https://jeandaledev.vercel.app/
 
 ### Vercel Deployment Steps
 
@@ -1014,7 +1014,7 @@ For questions, suggestions, or collaboration:
 
 - **Email:** dalejoseph035@gmail.com
 - **GitHub:** [@dalejoseph-dev](https://github.com/dalejoseph-dev)
-- **Website:** [Portfolio URL](https://jeandale-grpp27rp8-jean-dales-projects.vercel.app)
+- **Website:** [Portfolio URL](https://jeandaledev.vercel.app/)
 
 ---
 
