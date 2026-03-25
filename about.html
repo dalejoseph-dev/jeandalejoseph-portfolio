@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About — Alex Rivera</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="page-curtain"></div>
+        <div id="cursor"></div>
+        <div id="cursor-ring"></div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <span class="mobile-close" id="mobileClose">✕ Close</span>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="experience.html">Experience</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-logo">AR.</a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta"><span>Hire Me</span></a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+
+        <!-- PAGE HERO -->
+        <div class="page-hero">
+            <div
+                class="page-hero-bg"
+                style="
+                    background: radial-gradient(
+                        ellipse 50% 80% at 100% 50%,
+                        rgba(200, 255, 0, 0.05) 0%,
+                        transparent 70%
+                    );
+                "
+            ></div>
+            <div class="grid-lines"></div>
+            <div class="page-hero-content">
+                <p class="page-breadcrumb">01 — About Me</p>
+                <h1 class="page-hero-title">
+                    CODE IS MY<br /><span class="accent">MEDIUM.</span>
+                </h1>
+                <p class="page-hero-sub">
+                    Builder, craftsman, obsessive about the details.
+                </p>
+            </div>
+        </div>
+
+        <!-- INTRO SPLIT -->
+        <div class="intro-split">
+            <div class="intro-left reveal from-left">
+                <p class="section-label">Who I Am</p>
+                <h2 class="section-title">
+                    The engineer<br />behind the work.
+                </h2>
+                <div class="intro-text">
+                    <p>
+                        I'm a frontend engineer with
+                        <strong>6+ years</strong> of experience shipping web
+                        applications at scale — from scrappy early-stage
+                        startups to product teams at mid-size tech companies
+                        with millions of users.
+                    </p>
+                    <p>
+                        My work lives at the intersection of
+                        <strong>engineering rigor and design sensitivity</strong
+                        >. I care deeply about the invisible things: the 60fps
+                        animation, the sub-100ms interaction, the layout that
+                        just <em>feels</em> right on first load.
+                    </p>
+                    <p>
+                        I've led design systems, mentored junior engineers,
+                        driven accessibility audits, and owned core product
+                        surfaces end-to-end. When I'm not building, I contribute
+                        to open source and write about CSS architecture on my
+                        blog.
+                    </p>
+                    <p>
+                        Originally from Manila, currently based in
+                        <strong>San Francisco</strong>. Always happy to grab a
+                        coffee and talk product, code, or design.
+                    </p>
+                </div>
+                <div
+                    style="
+                        margin-top: 2.5rem;
+                        display: flex;
+                        gap: 1rem;
+                        flex-wrap: wrap;
+                    "
+                >
+                    <a href="work.html" class="btn-primary">See My Work</a>
+                    <a href="contact.html" class="btn-outline">Get in Touch</a>
+                </div>
+            </div>
+            <div class="intro-right reveal from-right reveal-delay-2">
+                <p class="section-label">Core Values</p>
+                <div class="values-list">
+                    <div class="value-item" data-hover>
+                        <div class="value-num">01</div>
+                        <div class="value-body">
+                            <div class="value-title">Ship with intention.</div>
+                            <div class="value-desc">
+                                Every decision — from component API to animation
+                                duration — has a reason behind it. No magic
+                                numbers, no mystery behavior.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="value-item" data-hover>
+                        <div class="value-num">02</div>
+                        <div class="value-body">
+                            <div class="value-title">
+                                Performance is a feature.
+                            </div>
+                            <div class="value-desc">
+                                Fast products win. I treat LCP, CLS, and TTI as
+                                first-class product metrics, not post-launch
+                                checklist items.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="value-item" data-hover>
+                        <div class="value-num">03</div>
+                        <div class="value-body">
+                            <div class="value-title">
+                                Accessibility, always.
+                            </div>
+                            <div class="value-desc">
+                                Good interfaces work for everyone. ARIA,
+                                keyboard navigation, and screen reader support
+                                aren't optional extras.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="value-item" data-hover>
+                        <div class="value-num">04</div>
+                        <div class="value-body">
+                            <div class="value-title">
+                                Collaborate relentlessly.
+                            </div>
+                            <div class="value-desc">
+                                The best products are built when design,
+                                engineering, and product are genuinely aligned.
+                                I operate in that gap.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="skills-section">
+            <div class="skills-header reveal">
+                <div>
+                    <p class="section-label">Skills &amp; Stack</p>
+                    <h2 class="section-title">What I work<br />with.</h2>
+                </div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-cell reveal">
+                    <div class="skill-icon">⚛️</div>
+                    <div class="skill-name">React / Next.js</div>
+                    <div class="skill-level">Expert</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="95%"></div>
+                    </div>
+                </div>
+                <div class="skill-cell reveal reveal-delay-1">
+                    <div class="skill-icon">🔷</div>
+                    <div class="skill-name">TypeScript</div>
+                    <div class="skill-level">Expert</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="92%"></div>
+                    </div>
+                </div>
+                <div class="skill-cell reveal reveal-delay-2">
+                    <div class="skill-icon">🎨</div>
+                    <div class="skill-name">CSS / Tailwind</div>
+                    <div class="skill-level">Expert</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="97%"></div>
+                    </div>
+                </div>
+                <div class="skill-cell reveal reveal-delay-3">
+                    <div class="skill-icon">🟢</div>
+                    <div class="skill-name">Node.js</div>
+                    <div class="skill-level">Advanced</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-cell reveal">
+                    <div class="skill-icon">🔥</div>
+                    <div class="skill-name">Framer Motion</div>
+                    <div class="skill-level">Advanced</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-cell reveal reveal-delay-1">
+                    <div class="skill-icon">🗄️</div>
+                    <div class="skill-name">GraphQL</div>
+                    <div class="skill-level">Intermediate</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="72%"></div>
+                    </div>
+                </div>
+                <div class="skill-cell reveal reveal-delay-2">
+                    <div class="skill-icon">🧪</div>
+                    <div class="skill-name">Vitest / Testing</div>
+                    <div class="skill-level">Advanced</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="83%"></div>
+                    </div>
+                </div>
+                <div class="skill-cell reveal reveal-delay-3">
+                    <div class="skill-icon">🚀</div>
+                    <div class="skill-name">Web Perf &amp; a11y</div>
+                    <div class="skill-level">Expert</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STACK MARQUEE -->
+        <div class="stack-section">
+            <p class="marquee-label">Full Stack</p>
+            <div class="marquee-track">
+                <span class="marquee-item">React</span
+                ><span class="marquee-item">Next.js</span
+                ><span class="marquee-item">TypeScript</span
+                ><span class="marquee-item">Tailwind CSS</span
+                ><span class="marquee-item">Framer Motion</span
+                ><span class="marquee-item">Radix UI</span
+                ><span class="marquee-item">Node.js</span
+                ><span class="marquee-item">Prisma</span
+                ><span class="marquee-item">PostgreSQL</span
+                ><span class="marquee-item">GraphQL</span
+                ><span class="marquee-item">Stripe</span
+                ><span class="marquee-item">Vercel</span
+                ><span class="marquee-item">Storybook</span
+                ><span class="marquee-item">Vitest</span
+                ><span class="marquee-item">Playwright</span
+                ><span class="marquee-item">Figma</span
+                ><span class="marquee-item">D3.js</span
+                ><span class="marquee-item">WebSockets</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="marquee-item">React</span
+                ><span class="marquee-item">Next.js</span
+                ><span class="marquee-item">TypeScript</span
+                ><span class="marquee-item">Tailwind CSS</span
+                ><span class="marquee-item">Framer Motion</span
+                ><span class="marquee-item">Radix UI</span
+                ><span class="marquee-item">Node.js</span
+                ><span class="marquee-item">Prisma</span
+                ><span class="marquee-item">PostgreSQL</span
+                ><span class="marquee-item">GraphQL</span
+                ><span class="marquee-item">Stripe</span
+                ><span class="marquee-item">Vercel</span
+                ><span class="marquee-item">Storybook</span
+                ><span class="marquee-item">Vitest</span
+                ><span class="marquee-item">Playwright</span
+                ><span class="marquee-item">Figma</span
+                ><span class="marquee-item">D3.js</span
+                ><span class="marquee-item">WebSockets</span>
+            </div>
+        </div>
+
+        <!-- TIMELINE -->
+        <div class="timeline-section">
+            <p class="section-label reveal">Background</p>
+            <h2 class="section-title reveal">How I got here.</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-body">
+                        <div class="timeline-title">
+                            Senior Frontend Engineer
+                        </div>
+                        <div class="timeline-org">Vercel</div>
+                        <div class="timeline-desc">
+                            Leading architecture on the dashboard product. Core
+                            contributor to the design system serving 1M+
+                            developers monthly.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-delay-1">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-body">
+                        <div class="timeline-title">Frontend Engineer II</div>
+                        <div class="timeline-org">Linear</div>
+                        <div class="timeline-desc">
+                            Owned the issue viewer, keyboard system, and project
+                            board. Drove the mobile redesign that grew mobile
+                            DAU by 55%.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-delay-2">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-body">
+                        <div class="timeline-title">UI Engineer</div>
+                        <div class="timeline-org">Figma</div>
+                        <div class="timeline-desc">
+                            Built the Figma Community platform and Plugin API
+                            documentation. Contributed 20+ components to the
+                            internal design system.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-delay-3">
+                    <div class="timeline-year">2017</div>
+                    <div class="timeline-body">
+                        <div class="timeline-title">BS Computer Science</div>
+                        <div class="timeline-org">
+                            University of the Philippines, Diliman
+                        </div>
+                        <div class="timeline-desc">
+                            Majored in CS with a minor in Design. Thesis on
+                            adaptive UI personalization using machine learning.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTERESTS -->
+        <div class="interests-section">
+            <p class="section-label reveal">Beyond the Code</p>
+            <h2 class="section-title reveal">What keeps me<br />curious.</h2>
+            <div class="interests-grid">
+                <div class="interest-card reveal" data-hover>
+                    <div class="interest-icon">✍️</div>
+                    <div class="interest-title">Technical Writing</div>
+                    <div class="interest-desc">
+                        I publish deep-dives on CSS architecture, animation
+                        performance, and design systems on my blog, reaching
+                        12k+ monthly readers.
+                    </div>
+                </div>
+                <div class="interest-card reveal reveal-delay-1" data-hover>
+                    <div class="interest-icon">🎸</div>
+                    <div class="interest-title">Music Production</div>
+                    <div class="interest-desc">
+                        Weekend producer of lo-fi beats. There's an overlap
+                        between music and UI — rhythm, tension, release. Both
+                        are about guiding attention.
+                    </div>
+                </div>
+                <div class="interest-card reveal reveal-delay-2" data-hover>
+                    <div class="interest-icon">🌿</div>
+                    <div class="interest-title">Outdoor Running</div>
+                    <div class="interest-desc">
+                        Half-marathon finisher. Running trails clears my head
+                        and often surfaces the solution to whatever engineering
+                        problem I'm stuck on.
+                    </div>
+                </div>
+                <div class="interest-card reveal reveal-delay-3" data-hover>
+                    <div class="interest-icon">🔭</div>
+                    <div class="interest-title">Open Source</div>
+                    <div class="interest-desc">
+                        Active contributor to React ecosystem projects.
+                        Maintainer of a small a11y-focused component library
+                        with 800+ GitHub stars.
+                    </div>
+                </div>
+                <div class="interest-card reveal reveal-delay-4" data-hover>
+                    <div class="interest-icon">📚</div>
+                    <div class="interest-title">Reading</div>
+                    <div class="interest-desc">
+                        I read obsessively across design, cognitive science, and
+                        business strategy. Currently: "The Design of Everyday
+                        Things" by Don Norman.
+                    </div>
+                </div>
+                <div class="interest-card reveal reveal-delay-5" data-hover>
+                    <div class="interest-icon">🎨</div>
+                    <div class="interest-title">Generative Art</div>
+                    <div class="interest-desc">
+                        Experimenting with canvas API and WebGL to create
+                        procedural visuals. The intersection of math and
+                        aesthetics never gets old.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <span class="footer-logo">AR.</span>
+            <span class="footer-copy"
+                >© 2026 Alex Rivera. Built with ♥ and caffeine.</span
+            >
+            <div class="footer-socials">
+                <a href="#">GitHub</a><a href="#">LinkedIn</a
+                ><a href="#">Twitter</a><a href="#">Dribbble</a>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — Alex Rivera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="page-curtain"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mobile-close" id="mobileClose">✕ Close</span>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="work.html">Work</a>
+  <a href="experience.html">Experience</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">AR.</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta"><span>Hire Me</span></a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg" style="background:radial-gradient(ellipse 50% 80% at 100% 60%, rgba(200,255,0,0.05) 0%, transparent 70%)"></div>
+  <div class="grid-lines"></div>
+  <div class="page-hero-content">
+    <p class="page-breadcrumb">03 — Experience</p>
+    <h1 class="page-hero-title">WHERE I'VE<br><span class="accent">WORKED.</span></h1>
+    <p class="page-hero-sub">6+ years across Vercel, Linear, Figma, and freelance.</p>
+  </div>
+</div>
+
+<div class="exp-page">
+  <div class="exp-switcher">
+
+    <!-- TABS -->
+    <div class="exp-tabs reveal from-left">
+      <div class="exp-tab active" onclick="setExp(0, this)" data-hover>
+        <div class="exp-tab-date">2022 — Present</div>
+        <div class="exp-tab-role">Senior Frontend Engineer</div>
+        <div class="exp-tab-company">Vercel</div>
+      </div>
+      <div class="exp-tab" onclick="setExp(1, this)" data-hover>
+        <div class="exp-tab-date">2020 — 2022</div>
+        <div class="exp-tab-role">Frontend Engineer II</div>
+        <div class="exp-tab-company">Linear</div>
+      </div>
+      <div class="exp-tab" onclick="setExp(2, this)" data-hover>
+        <div class="exp-tab-date">2019 — 2020</div>
+        <div class="exp-tab-role">UI Engineer</div>
+        <div class="exp-tab-company">Figma</div>
+      </div>
+      <div class="exp-tab" onclick="setExp(3, this)" data-hover>
+        <div class="exp-tab-date">2017 — 2019</div>
+        <div class="exp-tab-role">Junior Developer</div>
+        <div class="exp-tab-company">Freelance</div>
+      </div>
+    </div>
+
+    <!-- DETAIL -->
+    <div class="exp-detail reveal from-right reveal-delay-1">
+      <div class="exp-detail-inner" id="expInner">
+        <div class="exp-company-name" id="expCompany">VERCEL</div>
+        <div class="exp-detail-role"   id="expRole">Senior Frontend Engineer</div>
+        <div class="exp-detail-period" id="expPeriod">2022 — Present · San Francisco, CA</div>
+        <div class="exp-detail-desc"   id="expDesc">Leading frontend architecture for the Vercel dashboard and CLI tooling. Core contributor to the design system and owner of the deployment pipeline UI serving 1M+ developers monthly. Partner with design and product to define technical direction and UI standards across the organization.</div>
+        <ul class="exp-achievements" id="expAchievements">
+          <li>Rebuilt core dashboard in Next.js App Router — reduced LCP by 40% across all routes</li>
+          <li>Architected a shared component system used consistently across 8 product surfaces</li>
+          <li>Mentored 4 junior engineers with bi-weekly 1:1s and structured code review</li>
+          <li>Led a company-wide accessibility audit — achieved WCAG 2.1 AA compliance</li>
+          <li>Introduced visual regression testing with Playwright, catching 30+ layout bugs pre-launch</li>
+        </ul>
+        <div class="exp-tech" id="expTech">
+          <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span>
+          <span class="tag">Radix UI</span><span class="tag">Playwright</span><span class="tag">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="education-section">
+  <p class="section-label reveal">Education</p>
+  <h2 class="section-title reveal">Where I<br>studied.</h2>
+  <div class="education-grid">
+    <div class="edu-card reveal" data-hover>
+      <div class="edu-year">2013 — 2017</div>
+      <div class="edu-degree">BS Computer Science</div>
+      <div class="edu-school">University of the Philippines, Diliman</div>
+      <div class="edu-note">Graduated cum laude. Thesis on adaptive UI personalization using collaborative filtering. Active in the UP Computer Science Society.</div>
+    </div>
+    <div class="edu-card reveal reveal-delay-1" data-hover>
+      <div class="edu-year">2019</div>
+      <div class="edu-degree">Frontend Masters — Advanced React</div>
+      <div class="edu-school">Frontend Masters</div>
+      <div class="edu-note">Completed intensive course on advanced React patterns, state management, performance optimization, and TypeScript with React.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="certs-section">
+  <p class="section-label reveal">Certifications</p>
+  <h2 class="section-title reveal">Credentials.</h2>
+  <div class="certs-list">
+    <div class="cert-item reveal" data-hover>
+      <div class="cert-left"><div class="cert-name">AWS Certified Developer – Associate</div><div class="cert-issuer">Amazon Web Services</div></div>
+      <div class="cert-right"><span class="cert-year">2023</span><span class="cert-badge">Valid</span></div>
+    </div>
+    <div class="cert-item reveal" data-hover>
+      <div class="cert-left"><div class="cert-name">Google Professional Web Developer</div><div class="cert-issuer">Google</div></div>
+      <div class="cert-right"><span class="cert-year">2022</span><span class="cert-badge">Valid</span></div>
+    </div>
+    <div class="cert-item reveal" data-hover>
+      <div class="cert-left"><div class="cert-name">Certified Accessibility Professional (CPACC)</div><div class="cert-issuer">IAAP</div></div>
+      <div class="cert-right"><span class="cert-year">2021</span><span class="cert-badge">Valid</span></div>
+    </div>
+    <div class="cert-item reveal" data-hover>
+      <div class="cert-left"><div class="cert-name">TypeScript — Advanced Patterns</div><div class="cert-issuer">Frontend Masters</div></div>
+      <div class="cert-right"><span class="cert-year">2020</span><span class="cert-badge">Completed</span></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">AR.</span>
+  <span class="footer-copy">© 2026 Alex Rivera. Built with ♥ and caffeine.</span>
+  <div class="footer-socials">
+    <a href="#">GitHub</a><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Dribbble</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

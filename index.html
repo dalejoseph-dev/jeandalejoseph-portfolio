@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alex Rivera — Frontend Engineer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="page-curtain"></div>
+        <div id="cursor"></div>
+        <div id="cursor-ring"></div>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <span class="mobile-close" id="mobileClose">✕ Close</span>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="experience.html">Experience</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- NAV -->
+        <nav>
+            <a href="index.html" class="nav-logo">JD.</a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta"><span>Hire Me</span></a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section id="hero">
+            <div class="hero-bg"></div>
+            <div class="grid-lines"></div>
+
+            <div class="hero-left">
+                <p class="hero-tag">Available for Freelance &amp; Full-time</p>
+                <h1 class="hero-name">
+                    JEAN<br /><span class="accent">DALE</span>
+                </h1>
+                <p class="hero-title">Frontend Engineer &amp; UI Craftsman</p>
+                <p class="hero-desc">
+                    I build performant, pixel-perfect web experiences at the
+                    intersection of engineering rigor and design sensitivity.
+                    React, TypeScript, motion-driven interfaces.
+                </p>
+                <div class="hero-btns">
+                    <a href="work.html" class="btn-primary">View My Work</a>
+                    <a href="contact.html" class="btn-outline">Let's Talk</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-num">6+</div>
+                        <div class="stat-label">Years Exp.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">40+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">18</div>
+                        <div class="stat-label">Clients</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-visual">
+                    <div class="hero-ring-outer"></div>
+                    <div class="hero-ring-inner"></div>
+                    <div class="hero-card">
+                        <div class="hero-initials">JD</div>
+                    </div>
+                    <div class="hero-badge">Open to Work</div>
+                </div>
+            </div>
+
+            <div class="scroll-hint">
+                <div class="scroll-line"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- QUICK NAV -->
+        <div class="quick-nav">
+            <a href="about.html" class="quick-card reveal"
+                ><div class="quick-num">01</div>
+                <div class="quick-title">ABOUT</div>
+                <span class="quick-arrow">↗</span></a>
+            <a href="work.html" class="quick-card reveal reveal-delay-1"
+                ><div class="quick-num">02</div>
+                <div class="quick-title">WORK</div>
+                <span class="quick-arrow">↗</span></a>
+            <a href="experience.html" class="quick-card reveal reveal-delay-2"
+                ><div class="quick-num">03</div>
+                <div class="quick-title">EXPERIENCE</div>
+                <span class="quick-arrow">↗</span></a>
+            <a href="testimonials.html" class="quick-card reveal reveal-delay-3"
+                ><div class="quick-num">04</div>
+                <div class="quick-title">TESTIMONIALS</div>
+                <span class="quick-arrow">↗</span></a>
+            <a href="contact.html" class="quick-card reveal reveal-delay-4"
+                ><div class="quick-num">05</div>
+                <div class="quick-title">CONTACT</div>
+                <span class="quick-arrow">↗</span></a>
+        </div>
+
+        <footer>
+            <span class="footer-logo">AR.</span>
+            <span class="footer-copy"
+                >© 2026 Alex Rivera. Built with ♥ and caffeine.</span>
+            <div class="footer-socials">
+                <a href="#">GitHub</a><a href="#">LinkedIn</a
+                ><a href="#">Twitter</a><a href="#">Dribbble</a>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

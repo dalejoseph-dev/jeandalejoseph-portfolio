@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Work — Alex Rivera</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="page-curtain"></div>
+        <div id="cursor"></div>
+        <div id="cursor-ring"></div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <span class="mobile-close" id="mobileClose">✕ Close</span>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="experience.html">Experience</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-logo">AR.</a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta"><span>Hire Me</span></a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+
+        <!-- PAGE HERO -->
+        <div class="page-hero">
+            <div
+                class="page-hero-bg"
+                style="
+                    background: radial-gradient(
+                        ellipse 50% 80% at 0% 50%,
+                        rgba(232, 93, 58, 0.05) 0%,
+                        transparent 70%
+                    );
+                "
+            ></div>
+            <div class="grid-lines"></div>
+            <div class="page-hero-content">
+                <p class="page-breadcrumb">02 — Work</p>
+                <h1 class="page-hero-title">
+                    PROJECTS THAT<br /><span class="accent">SHIP.</span>
+                </h1>
+                <p class="page-hero-sub">
+                    A curated selection of production work across design
+                    systems, SaaS, and developer tools.
+                </p>
+            </div>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter-bar reveal">
+            <span class="filter-label">Filter:</span>
+            <button
+                class="filter-btn active"
+                onclick="filterProjects('all', this)"
+            >
+                All
+            </button>
+            <button class="filter-btn" onclick="filterProjects('react', this)">
+                React
+            </button>
+            <button
+                class="filter-btn"
+                onclick="filterProjects('design-system', this)"
+            >
+                Design Systems
+            </button>
+            <button class="filter-btn" onclick="filterProjects('saas', this)">
+                SaaS
+            </button>
+            <button
+                class="filter-btn"
+                onclick="filterProjects('open-source', this)"
+            >
+                Open Source
+            </button>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="projects-container">
+            <!-- FEATURED -->
+            <div class="featured-project reveal" data-cat="react design-system">
+                <div class="feat-thumb">
+                    <div class="feat-bg-text">NOVA</div>
+                    <div
+                        class="feat-overlay"
+                        style="
+                            background: linear-gradient(
+                                135deg,
+                                rgba(200, 255, 0, 0.06),
+                                transparent
+                            );
+                        "
+                    ></div>
+                    <div class="feat-label">Featured</div>
+                </div>
+                <div class="feat-body">
+                    <div class="feat-tags">
+                        <span class="tag">Next.js</span
+                        ><span class="tag">TypeScript</span>
+                        <span class="tag rust">Framer Motion</span
+                        ><span class="tag">Radix UI</span>
+                        <span class="tag">Storybook</span>
+                    </div>
+                    <h3 class="feat-title">NOVA DESIGN SYSTEM</h3>
+                    <p class="feat-desc">
+                        A fully accessible, themeable component library serving
+                        3 product teams with 80+ components, dark mode, and
+                        comprehensive Storybook documentation. Reduced
+                        design–dev handoff time by 60%.
+                    </p>
+                    <div class="feat-meta">
+                        <div class="feat-meta-item">
+                            <div class="feat-meta-label">Year</div>
+                            <div class="feat-meta-value">2023</div>
+                        </div>
+                        <div class="feat-meta-item">
+                            <div class="feat-meta-label">Role</div>
+                            <div class="feat-meta-value">Lead Engineer</div>
+                        </div>
+                        <div class="feat-meta-item">
+                            <div class="feat-meta-label">Status</div>
+                            <div
+                                class="feat-meta-value"
+                                style="color: var(--acid)"
+                            >
+                                Live
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feat-links">
+                        <a href="#" class="feat-link"
+                            >View Project
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M5 12h14M12 5l7 7-7 7" /></svg
+                        ></a>
+                        <a href="#" class="feat-link" style="color: var(--mist)"
+                            >GitHub
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                                /></svg
+                        ></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 1 -->
+            <div class="grid-row">
+                <div class="project-card reveal" data-cat="saas react">
+                    <div class="project-thumb">
+                        <div
+                            class="project-thumb-text"
+                            style="color: var(--rust)"
+                        >
+                            FLUX
+                        </div>
+                        <div
+                            class="project-thumb-overlay"
+                            style="
+                                background: linear-gradient(
+                                    135deg,
+                                    rgba(232, 93, 58, 0.1),
+                                    transparent
+                                );
+                            "
+                        ></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">React</span
+                            ><span class="tag rust">D3.js</span
+                            ><span class="tag">WebSockets</span>
+                        </div>
+                        <h3 class="project-title">Flux Analytics Dashboard</h3>
+                        <p class="project-desc">
+                            Real-time data visualization with 30+ chart types,
+                            drag-and-drop layout editor, and live data streaming
+                            for enterprise clients.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#" class="project-link"
+                                >View
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" /></svg
+                            ></a>
+                            <span class="project-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal reveal-delay-1" data-cat="saas">
+                    <div class="project-thumb">
+                        <div class="project-thumb-text" style="color: #9090ff">
+                            ECHO
+                        </div>
+                        <div
+                            class="project-thumb-overlay"
+                            style="
+                                background: linear-gradient(
+                                    135deg,
+                                    rgba(100, 100, 255, 0.1),
+                                    transparent
+                                );
+                            "
+                        ></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">Vue 3</span
+                            ><span class="tag blue">WebSockets</span
+                            ><span class="tag">CRDT</span>
+                        </div>
+                        <h3 class="project-title">Echo Collaboration Tool</h3>
+                        <p class="project-desc">
+                            Real-time collaborative editor with presence
+                            indicators, conflict-free replicated data types, and
+                            offline sync support.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#" class="project-link"
+                                >View
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" /></svg
+                            ></a>
+                            <span class="project-year">2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="project-card reveal reveal-delay-2"
+                    data-cat="saas react"
+                >
+                    <div class="project-thumb">
+                        <div class="project-thumb-text" style="color: #00dcb4">
+                            GROVE
+                        </div>
+                        <div
+                            class="project-thumb-overlay"
+                            style="
+                                background: linear-gradient(
+                                    135deg,
+                                    rgba(0, 220, 180, 0.08),
+                                    transparent
+                                );
+                            "
+                        ></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">Next.js 14</span
+                            ><span class="tag">Prisma</span
+                            ><span class="tag rust">Stripe</span>
+                        </div>
+                        <h3 class="project-title">Grove Creator Marketplace</h3>
+                        <p class="project-desc">
+                            Full-stack e-commerce platform with subscriptions,
+                            file delivery, and a custom storefront builder for
+                            digital creators.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#" class="project-link"
+                                >View
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" /></svg
+                            ></a>
+                            <span class="project-year">2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 2 -->
+            <div class="grid-row">
+                <div
+                    class="project-card reveal"
+                    data-cat="open-source design-system"
+                >
+                    <div class="project-thumb">
+                        <div
+                            class="project-thumb-text"
+                            style="color: var(--acid)"
+                        >
+                            A11Y
+                        </div>
+                        <div
+                            class="project-thumb-overlay"
+                            style="
+                                background: linear-gradient(
+                                    135deg,
+                                    rgba(200, 255, 0, 0.06),
+                                    transparent
+                                );
+                            "
+                        ></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">React</span
+                            ><span class="tag">ARIA</span
+                            ><span class="tag">Open Source</span>
+                        </div>
+                        <h3 class="project-title">react-a11y-kit</h3>
+                        <p class="project-desc">
+                            Open-source accessibility component library with
+                            800+ GitHub stars. Focus traps, roving tabindex,
+                            announcement regions.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#" class="project-link"
+                                >GitHub
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" /></svg
+                            ></a>
+                            <span class="project-year">2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="project-card reveal reveal-delay-1"
+                    data-cat="saas react"
+                >
+                    <div class="project-thumb">
+                        <div
+                            class="project-thumb-text"
+                            style="color: var(--rust)"
+                        >
+                            ORBIT
+                        </div>
+                        <div
+                            class="project-thumb-overlay"
+                            style="
+                                background: linear-gradient(
+                                    135deg,
+                                    rgba(232, 93, 58, 0.08),
+                                    transparent
+                                );
+                            "
+                        ></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">React</span
+                            ><span class="tag rust">Three.js</span
+                            ><span class="tag">WebGL</span>
+                        </div>
+                        <h3 class="project-title">Orbit 3D Configurator</h3>
+                        <p class="project-desc">
+                            Interactive product configurator with real-time 3D
+                            rendering, material swapping, and embeddable widget
+                            SDK.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#" class="project-link"
+                                >View
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" /></svg
+                            ></a>
+                            <span class="project-year">2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="project-card reveal reveal-delay-2"
+                    data-cat="open-source react"
+                >
+                    <div class="project-thumb">
+                        <div class="project-thumb-text" style="color: #c084fc">
+                            PULSE
+                        </div>
+                        <div
+                            class="project-thumb-overlay"
+                            style="
+                                background: linear-gradient(
+                                    135deg,
+                                    rgba(192, 132, 252, 0.08),
+                                    transparent
+                                );
+                            "
+                        ></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span
+                            ><span class="tag">MDX</span
+                            ><span class="tag">Open Source</span>
+                        </div>
+                        <h3 class="project-title">Pulse Dev Blog Platform</h3>
+                        <p class="project-desc">
+                            Opinionated MDX-powered blog starter for developer
+                            blogs. Used by 200+ engineers. Lighthouse 100 out of
+                            the box.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#" class="project-link"
+                                >GitHub
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" /></svg
+                            ></a>
+                            <span class="project-year">2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STATS -->
+            <div class="stats-strip">
+                <div class="strip-stat reveal">
+                    <div class="strip-num">40+</div>
+                    <div class="strip-label">Projects Shipped</div>
+                </div>
+                <div class="strip-stat reveal reveal-delay-1">
+                    <div class="strip-num">18</div>
+                    <div class="strip-label">Happy Clients</div>
+                </div>
+                <div class="strip-stat reveal reveal-delay-2">
+                    <div class="strip-num">6+</div>
+                    <div class="strip-label">Years Building</div>
+                </div>
+                <div class="strip-stat reveal reveal-delay-3">
+                    <div class="strip-num">800+</div>
+                    <div class="strip-label">OSS Stars</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <span class="footer-logo">AR.</span>
+            <span class="footer-copy"
+                >© 2026 Alex Rivera. Built with ♥ and caffeine.</span
+            >
+            <div class="footer-socials">
+                <a href="#">GitHub</a><a href="#">LinkedIn</a
+                ><a href="#">Twitter</a><a href="#">Dribbble</a>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
